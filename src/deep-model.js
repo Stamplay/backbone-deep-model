@@ -228,7 +228,7 @@
 
                 //Trigger change events for parent keys with wildcard (*) notation
                 for(var n = fields.length - 1; n > 0; n--) {
-                  var parentKey = _.first(fields, n).join(separator),
+                  var parentKey = _.take(fields, n).join(separator),
                       wildcardKey = parentKey + separator + '*';
 
                   if (!alreadyTriggered.hasOwnProperty(wildcardKey) || !alreadyTriggered[wildcardKey]) { // * @restorer
